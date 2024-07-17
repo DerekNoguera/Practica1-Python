@@ -1,0 +1,12 @@
+Vamos a gestionar las notas de los estudiantes en un curso.
+ Cada estudiante tiene un nombre único y se registran las notas
+ obtenidas en varias asignaturas., ¿Cuál sería la mejor estructura de datos?
+
+
+Tienes una lista de animales y deseas categorizarlos en dos grupos:
+ animales acuáticos y animales terrestres. Luego, deseas evaluar qué
+ animales se encuentran en ambos grupos y cuáles son exclusivamente terrestres.
+ Animales: Pato, León, Tortuga, Cangrejo, Pez, Perro.
+
+Dada una lista de elementos, el objetivo es calcular una nueva lista que contenga
+ solo los elementos únicos de la lista original. Números: 1, 2, 3, 4, 2, 5, 6, 1, 7, 8, 9, 9, 10.
