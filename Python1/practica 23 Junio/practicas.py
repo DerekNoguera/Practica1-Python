@@ -16,9 +16,7 @@ mostar_orden_de_apuestas(apuestas)
 # EJERCICIO 3
 
 def encontrar_valores_absolutos(numeros: list[int]) -> list[list]:
-    x = map(abs, numeros[0:100])
-    print(list(x))
-
+    return list(map(abs,numeros))
 numeros = [-3, -2, 0, 1, 2, 3]
 encontrar_valores_absolutos(numeros)
 
@@ -27,7 +25,6 @@ encontrar_valores_absolutos(numeros)
 
 def encontrar_inventario_bajo(lista_inventario: dict[str, int]) -> dict[str, int]:
     lista_inventario = dict(filter(lambda x: x[1] < 4, lista_inventario.items()))
-    print(lista_inventario)
     return lista_inventario
 inventario = {"manzana": 2, "peras": 5, "platanos":1}
 encontrar_inventario_bajo(inventario)
@@ -36,7 +33,6 @@ encontrar_inventario_bajo(inventario)
 
 def encontrar_longitudes_de_palabras(lista_palabras: list[str])-> dict[str,int]:
     x = dict(map(lambda palabra: (palabra, len(palabra)), lista_palabras))
-    print(x)
     return x
 palabras=["Hola", "Bienvenido", "Adios"]
 encontrar_longitudes_de_palabras(palabras)
@@ -59,12 +55,13 @@ somos_todos_palindromos(palindromos)
 # EJERCICIO 8
 
 def hay_duplicados(lista: list) -> bool: 
-    x = len(lista)
-    y = list(set(lista))
-    if y == x:
-        print(True)
-    else:
-        print(False)
+    # x = len(lista)
+    # y = list(set(lista))
+    # if y == x:
+    #     print(True)
+    # else:
+    #     print(False)
+    return len(lista) != len(set(lista))
 lista = [1,2,3,4,5,1]
 hay_duplicados(lista)
 
