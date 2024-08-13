@@ -1,0 +1,9 @@
+- nivel: 25
+  nombre: Pikachu
+  tipo: Electrico
+- nivel: 18
+  nombre: Charmander
+  tipo: Fuego
+- nivel: 20
+  nombre: Squirtle
+  tipo: Agua
