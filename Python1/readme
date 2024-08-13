@@ -10,3 +10,7 @@ Tienes una lista de animales y deseas categorizarlos en dos grupos:
 
 Dada una lista de elementos, el objetivo es calcular una nueva lista que contenga
  solo los elementos únicos de la lista original. Números: 1, 2, 3, 4, 2, 5, 6, 1, 7, 8, 9, 9, 10.
+
+SQLite para mysql https://sqlite.org/index.html
+
+Robo3T para MongoDB https://robomongo.org/
