@@ -1,0 +1,4 @@
+Inner Joins para obtener datos de 2 tablas.
+Left Join
+Right Join
+Full Join 

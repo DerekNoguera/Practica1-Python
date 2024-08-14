@@ -1,0 +1,52 @@
+SELECT department_id, MAX(salary)
+FROM employees
+GROUP BY department_id;
+
+SELECT customer_id, COUNT(order_id) AS total_orders
+FROM orders
+GROUP BY customer_id
+HAVING COUNT(order_id) > 2;
+
+SELECT product_id, SUM(amount) AS total_sales
+FROM sales
+GROUP BY product_id
+HAVING SUM(amount) > 1000;
+
+SELECT department_id, AVG(salary) AS avg_salary
+FROM employees
+GROUP BY department_id
+HAVING AVG(salary) < 500000;
+
+SELECT product_id, MIN(price) AS min_price
+FROM products
+GROUP BY product_id
+HAVING MIN(price) > 50;
+
+SELECT department_id, MAX(salary) AS max_salary
+FROM employees
+GROUP BY department_id
+HAVING MAX(salary) > 100000;
+
+SELECT * FROM employees
+WHERE name LIKE 'A%'; --palabras que inician con A
+
+SELECT * FROM employees
+WHERE name LIKE '%a%'; --palabras que contienen a
+
+SELECT * FROM employees
+WHERE name LIKE '_a%'; ---palabras que tienen a en la segunda posición
+
+SELECT * FROM employees
+WHERE name LIKE '[JM]ack'; --Jack, Mack
+
+SELECT * FROM employees
+WHERE name LIKE '[A-D]lice'; --Alice, Blice, Clice, Dlice
+
+SELECT * FROM employees
+WHERE name LIKE '[^JM]ack'; --Back, Cack, Dack
+
+SELECT * FROM words
+WHERE word LIKE 'pre%' OR word LIKE 'post%' AND word LIKE '%tition';
+
+SELECT * FROM words
+WHERE word SIMILAR TO '(pre|post)%tition';
