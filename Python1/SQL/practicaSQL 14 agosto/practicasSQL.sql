@@ -76,7 +76,7 @@ GROUP BY grade
 -- columna del resultado del count).
 SELECT COUNT(id) AS "Resultado del count", students.grade
 from students
-WHERE grade > 1
+-- WHERE grade > 1
 GROUP BY grade
 HAVING COUNT(*) > 1;
 
@@ -155,3 +155,6 @@ select name,grade from students ORDER BY grade DESC LIMIT 3;
 -- 20) Una consulta en la tabla "Students" para obtener los 3 estudiantes con la nota más baja (usando
 
 select name,grade from students ORDER BY grade asc limit 3;
+
+
+-- https://stackoverflow.com/questions/12759596/validate-email-addresses-in-mysql regexp
