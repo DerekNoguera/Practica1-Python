@@ -59,8 +59,7 @@ LEFT JOIN courses ON students.id = courses.`studentID`;
 -- 3) Una consulta usando un RIGHT JOIN entre las tablas "Students" y "Courses" para saber cuáles
 -- cursos tiene estudiantes que ya no existen. Se debe mostrar el nombre del estudiante y el código
 -- del curso.
-SELECT students.name, courses.code FROM students
-RIGHT JOIN courses ON students.id = courses.`studentID`
+SELECT students.name, courses.code FROM studentsRIGHT JOIN courses ON students.id = courses.`studentID`
 
 -- 4) Una consulta usando un GROUP BY y COUNT en la tabla "Students" para saber la cantidad
 -- de estudiantes con la misma nota. Se debe mostrar la nota y la cantidad de estudiantes (se puede
