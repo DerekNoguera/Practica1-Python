@@ -75,7 +75,7 @@ GROUP BY grade
 -- columna del resultado del count).
 SELECT COUNT(id) AS "Resultado del count", students.grade
 from students
-WHERE grade > 1
+-- WHERE grade > 1
 GROUP BY grade
 HAVING COUNT(*) > 1;
 
@@ -84,40 +84,76 @@ HAVING COUNT(*) > 1;
 
 SELECT students.id, students.name from students
 UNION
-SELECT teachers.id, teachers.name from teachers
+SELECT teachers.id, teachers.name from teachers;
+
 -- 7) Una consulta usando EXISTS entre las tabla "Students" y "Teachers" para obtener toda la
 -- información de los estudiantes que tengan el mismo nombre que el de un profesor
 
+SELECT * from students WHERE EXISTS(select 1 from teachers Where students.name= teachers.name)
+
 -- 8) Una consulta usando NOT EXISTS entre las tabla "Students" y "Teachers" para obtener toda
 -- la información de los estudiantes que no tengan el mismo nombre que el de un profesor
+select * from students where not EXISTS (SELECT 1 from teachers where students.name = teachers.name)
 
 -- 9) Una consulta usando LIKE en la tabla "Students" para obtener el nombre de los estudiantes
 -- que inician con la letra ‘M’
+select students.name from students
+WHERE students.name LIKE "M%";
 
 -- 10) Una consulta usando LIKE en la tabla "Students" para obtener el nombre de los estudiantes
 -- que finalizan con la letra ‘o’
+select students.name from students
+where students.name Like '%o';
 
 -- 11) Una consulta usando LIKE en la tabla "Teachers" para obtener el nombre de los profesores
 -- que incian con la letra ‘R’ y finalizan con la letra ‘o’
 
+select teachers.name from teachers
+where teachers.name like 'R%o';
+
 -- 12) Una consulta usando LIKE en la tabla "Students" para obtener el nombre de los estudiantes
 -- que tengan ‘ar’ en su nombre
 
+select students.name from students
+where students.name like '%ar%';
+
 -- 13) Una consulta en la tabla "Students" para obtener el promedio de las notas de los estudiantes
+
+select AVG(grade) as promedio
+from students;
 
 -- 14) Una consulta en la tabla "Students" para obtener la cantidad total de estudiantes en la tabla
 
+select count(students.name) from students;
+
 -- 15) Una consulta en la tabla "Students" para obtener nota más alta de los estudiantes
+
+select MAX(students.grade) from students;
 
 -- 16) Una consulta en la tabla "Students" para obtener el estudiante con la nota más alta (mostrar
 -- nombre y nota)
+select name,grade
+from students
+where grade = (SELECT MAX(grade) from students);
 
 -- 17) Una consulta en la tabla "Students" para obtener nota más baja de los estudiantes
+
+select min(students.grade) from students
 
 -- 18) Una consulta en la tabla "Students" para obtener el estudiante con la nota más baja (mostrar
 -- nombre y nota)
 
+select name,grade from students
+where grade = (SELECT min(grade) from students)
+
 -- 19) Una consulta en la tabla "Students" para obtener los 3 estudiantes con la nota más alta (usando
 -- LIMIT)
 
+select name,grade from students ORDER BY grade DESC LIMIT 3;
+
 -- 20) Una consulta en la tabla "Students" para obtener los 3 estudiantes con la nota más baja (usando
+
+select name,grade from students ORDER BY grade asc limit 3;
+
+
+-- https://stackoverflow.com/questions/12759596/validate-email-addresses-in-mysql regexp
