@@ -1,0 +1,65 @@
+Conocimiento general
+
+1 - Explique con sus propias palabras qué es una base de datos?
+Una base de datos es donde se guardan datos de una empresa o una APP/WEB y se pueden guardar booleanos, enteros, strings, etc...
+
+2 - Mencione dos ventajas de utilizar bases de datos
+- Es una manera mas segura de guardar los datos
+- Es una manera mas facil de acceder a los datos guardados y pueden accederse desde las app/WEB
+
+3 - ¿Cuál es la diferencia entre una base de datos relacional y una no relacional (NoSQL)?
+- Como la misma pregunta lo dice, las datos relacionados son datos que pueden relacionarse entre si para validar propiedades de una tabla
+- Mientras que las no relacionadas no puede hacer eso.
+
+4 - Mencione tres tipos de bases de datos NoSQL?
+- MongoDB
+- Cassandra
+- Redis
+
+5 - ¿Cuál es el propósito de las vistas (views)?
+- Almacenar un estado para la base de datos
+
+6 - ¿Qué es un store procedure?
+- Es un conjunto de instrucciones SQL predefinidas, almacenadas en la base de datos, para ejecución repetida y eficiente.
+
+7 - ¿Cuál es el propósito de una llave primaria (primary key) en una base de datos relacional?
+- Que la propiedad tenga un ID en especifico y que no se repita
+
+8 - ¿Qué es una transacción en una base de datos relacional?
+-Una transacción de base de datos relacional es una o más instrucciones SQL
+
+9 - Mencione una ventaja y una desventaja de las bases de datos no relacionales
+- No pueden relacionarse entre si
+- Problemas de consultas completas.
+
+10 - Mencione dos tipos de respaldos (backups)
+- Respaldo completo
+- Respaldo diferencial
+
+
+EXTRA
+
+
+1. ¿Qué significan las siglas ACID?
+- Atomicidad, Consistencia, Aislamiento, Durabilidad.
+
+2. ¿Qué es la 'desnormalización'?
+- La denormalización es el proceso de introducir redundancia en una base de datos para mejorar el rendimiento de consultas
+
+3. Mencione dos técnicas para optimizar bases de datos.
+- Índices y consultas optimizadas.
+
+1 - ¿Para qué sirve la operación JOIN?
+    - Para combinar filas de 2  o mas tablas
+
+2 -¿Cuál es la diferencia entre un LEFT JOIN y un RIGHT JOIN?
+Uno pasa todos los elementos de una lista a la izquierda de una tabla y la otra es lo contrario
+
+3 - Brinde 3 ejemplos de cómo utilizar el operador LIKE
+-SELECT * FROM empleados WHERE nombre LIKE 'J%';
+-SELECT * FROM usuarios WHERE email LIKE '%gmail%';
+-SELECT * FROM productos WHERE codigo LIKE '%123';
+
+4. ¿Para qué sirve el GROUP BY? De un ejemplo
+- GROUP BY pone las filas con el mismo valor en un solo cubo
+ejemplo: La función se aplica a cada grupo, devolviendo así tantas filas como grupos haya

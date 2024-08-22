@@ -89,6 +89,10 @@ db.libros.aggregate([
     {$sort: {totalSales: -1}},
     {$limit: 5}
 ])
+//            R/
+// Hace un grupo donde muestra el genero que mas se repite,muestra la catidad que se repite ese genero
+// Y saca el promedio de todos los años existentes, hace un sorted de el numero de ventas para que lo muestre decreciente
+//usando el totalSales de abajo y hace que sea un limite de 5
 
                             // Práctica - Agregación
 
@@ -109,3 +113,6 @@ db.sales.aggregate([
     {$sort:{totalSales: -1}},
     {$limit: 5}
 ])
+// Se conecta a la carpeta sales, elegimos elementos que queremos agarrar en el $match, luego hacemos un grupo en el que se muestra el id de el producto, la cantidad de ventas
+// y el promedio de el precio, abajo se crea un sort y ese totalSales es el que se le envia a el aggregate de arriba donde tambien se le hace un sort()
+// y se hace un limite de 5 tambien
